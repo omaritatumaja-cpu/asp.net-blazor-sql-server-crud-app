@@ -16,3 +16,5 @@ dotnet ef migrations add FirstMigration
 dotnet ef database update
 # remove migrations 
 dotnet ef migrations remove
+# delete database
+dotnet ef database drop
