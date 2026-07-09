@@ -13,3 +13,6 @@ Release/
 *.suo
 
 *.sln.docstates
+.env
+
+
