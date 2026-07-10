@@ -12,6 +12,12 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+// basic cors config that allows all origins:app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+app.UseCors(policy => policy
+    .WithOrigins("https://yourfrontend.com")
+    .AllowAnyHeader()
+    .AllowAnyMethod());
+
 
 app.UseHttpsRedirection();
 
